@@ -1,0 +1,10 @@
+   'Executa o laço de repetição do Do..loop Until
+    i = 1
+    
+    Do
+    
+        Range("C" & i).Value = i + 20
+        i = i + 1
+    Loop Until (i > 10)
+    
+End Sub

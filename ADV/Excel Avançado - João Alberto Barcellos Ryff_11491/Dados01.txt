@@ -1,0 +1,22 @@
+CÓDIGO;PRODUTO;FABRICANTE;TIPO;COR;MATERIAL;DATA DE FABRICAÇÃO;QUANTIDADE PEDIDA;VALOR
+1;Calça;JM Roupas;Esporte;Preta;Malha;01/06/2010;100;25
+2;Calça;JM Roupas;Social;Azul;Microfibra;05/07/2010;50;15
+3;Calça;JM Roupas;Social;Branca;Tergal;04/05/2010;80;14
+4;Camiseta;Nova Textil;TShort;Lilas;Malha;10/11/2010;90;20
+5;Camiseta;Nova Textil;Babylook;Amarela;Malha;03/09/2010;110;15
+6;Saia;JM Roupas;Mini;Verde;Jeans;05/05/2010;130;15
+7;Saia;JM Roupas;Longa;Preta;Jeans;13/11/2010;120;10
+8;Camisa;Nova Textil;Esporte;Listrada;Linho;14/05/2010;110;15
+9;Camisa;Nova Textil;Esporte;Branco liso;Algodão;11/12/2010;100;20
+10;Camisa;Nova Textil;Malha;Preto listrado;Poliester;15/05/2010;30;25
+11;Blusa;Ricardan;Social Manga Curta;Azul;Cotton;20/04/2010;25;30
+12;Blusa;Ricardan;Social Manga Curta;Vermelha;Poliester;11/06/2010;35;22
+13;Blusa;Ricardan;Social Manga Longa;Branca;Algodão;15/07/2010;100;20
+14;Meia;Jondrei;Esporte Cano Curto;Cinza;Lycra;06/08/2010;90;7
+15;Meia;Jondrei;Esporte Cano Longo;Preta;Lã;11/12/2010;95;9
+16;Meia;Mimosa;Social Cano Curto;Branca;Linho;14/07/2010;130;6
+17;Meia;Mimosa;Social Cano Longo;Verde;Malha;04/09/2010;150;5
+18;Sapato;Bom Passo;Social;Marrom;Couro;10/08/2012;40;32
+
+ 
+

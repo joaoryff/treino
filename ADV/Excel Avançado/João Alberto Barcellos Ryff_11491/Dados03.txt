@@ -1,0 +1,17 @@
+Código_Modelo_Marca_Motor_Preço
+A001_Accord_Honda_2.0 16 V_99.800,00
+C001_Captiva Sport_Chevrolet_V6_92.990,00
+C002_Meriva_Chevrolet_1.8_46.300,00
+C003_S10_Chevrolet_4 Cil_46.990,00
+C004_Zafira_Chevrolet_2.0_68.000,00
+F001_Focus_Ford_1.8_70.390,00
+F002_Linea_Fiat_1.9_69.644,00
+F003_Fusion_Ford_16V_83.620,00
+H001_Azera_Hyundai_V6 24V_93.900,00
+H002_Santa Fé_Hyundai_V6_130.000,00
+K001_Sorento_Kia_V6_124.900,00
+N001_Pathifinder_Nissan_V6_162.440,00
+R001_Logan_Renault_1.6_29.900,00
+R002_Sandero_Renault_1.6_50.870,00
+V001_Passat CC_Volkswagen_2.5_200.000,00
+V002_Jetta_Volkswagen_20V_93.135,00

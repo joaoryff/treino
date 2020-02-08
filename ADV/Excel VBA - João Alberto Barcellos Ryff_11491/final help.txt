@@ -1,0 +1,22 @@
+Private Sub cdmCalcular_Click()
+    Dim i As Integer, n1, n2, n3, n4, media As Single: i = 6
+    
+    Do While Not IsEmpty(Cells(i, 1))
+    n1 = Cells(i, 2) 'Armazena o valor da nota
+    n2 = Cells(i, 3)
+    n3 = Cells(i, 4)
+    n4 = Cells(i, 5)
+    
+    Cells(i, 6) = WorksheetFunction.Average(n1, n2, n3, n4) 'calculo da média
+    
+    'Análise o resultado da média
+    Select Case Cells(i, 6)
+        Case Is >= 7: Cells(i, 7) = "Aprovado"
+        Case Is > 5: Cells(i, 7) = "Prova Final"
+        Case Else: Cells(i, 7) = "Reprovado"
+    End Select
+    i = i + 1
+Loop
+    
+End Sub
+

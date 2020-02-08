@@ -1,0 +1,9 @@
+'Cria uma variável do tipo Byte (0-255)
+    Dim i As Byte
+    
+    'Executa o laço de repetição do For..Next
+    For i = 1 To 10
+        Range("A" & i).Value = i
+    Next
+       
+End Sub

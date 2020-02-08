@@ -1,0 +1,24 @@
+COD.INS	NOME	PROFISSÃO
+1	Flávio	Diretor de T.I.
+2	Diego	Instrutor
+3	Mauro	Web Designer
+4	Ricardo	Programador
+5	Hugo	Programador
+6	Maia	Coordenador
+7	Diogo	Estagiário
+8	Adriano	Analista de Suporte
+9	Adriana	Recepcionista
+10	Ana Cláudia	Vendedora
+11	Núbia	Vendedora
+12	Fabiana	Vendedora
+13	Flávia	Vendedora
+14	Aline	Vendedora
+15	Bruno	Vendedor
+16	Tales	Administrador de Redes
+10	Ana Cláudia	Vendedora
+11	Núbia	Vendedora
+12	Fabiana Vendedora
+13	Flávia	Vendedora
+14	Aline	Vendedora
+15	Bruno	Vendedor
+16	Tales 	Administrador de Redes
