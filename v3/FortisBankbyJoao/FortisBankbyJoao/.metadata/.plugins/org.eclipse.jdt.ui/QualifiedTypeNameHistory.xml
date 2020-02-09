@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.beans.Statement"/>
+<fullyQualifiedTypeName name="data.SavingDB"/>
+<fullyQualifiedTypeName name="bus.Customer"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="data.CustomerDB"/>
+<fullyQualifiedTypeName name="bus.Manager"/>
+<fullyQualifiedTypeName name="data.ManagerDB"/>
+<fullyQualifiedTypeName name="bus.enumAccType"/>
+<fullyQualifiedTypeName name="data.CreditDB"/>
+<fullyQualifiedTypeName name="bus.Account"/>
+<fullyQualifiedTypeName name="data.CheckingDB"/>
+<fullyQualifiedTypeName name="data.AccountDB"/>
+<fullyQualifiedTypeName name="bus.Checking"/>
+<fullyQualifiedTypeName name="bus.Saving"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>

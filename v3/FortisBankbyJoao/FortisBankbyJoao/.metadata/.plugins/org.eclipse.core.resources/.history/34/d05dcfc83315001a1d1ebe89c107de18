@@ -1,0 +1,106 @@
+package data;
+
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import bus.Saving;
+
+public class SavingDB {
+
+public static Saving Display() throws SQLException{
+		   
+	    Connection conn = ConnectionDB.ConnDB();
+	    Saving sav = new Saving();
+		String sqlQuery;
+		System.out.println("\nSaving list...\n");
+	    sqlQuery = "select * from saving";
+	    Statement myStatement = null;
+	    ResultSet myResultSet = null;
+	    myStatement = conn.createStatement();
+	    myResultSet = myStatement.executeQuery(sqlQuery);
+	    
+	    while(myResultSet.next())
+	    {
+	    
+	    	sav.setS_number(myResultSet.getInt(1));
+	    	sav.setT_number(myResultSet.getInt(2));
+	    	sav.setS_balance(myResultSet.getFloat(3));
+	    	sav.setS_fee(myResultSet.getString(4).charAt(0));
+	    	System.out.println("\nSaving No:" + sav.getS_number() + " Trans. No:" + sav.getT_number()+ " Balance: " + sav.getS_balance()+ " Fee: " + sav.getS_fee());
+	    }
+	    
+	    conn.close();
+	   return sav;
+	   
+	}
+
+public static void Add(Saving saving) throws SQLException{
+	
+	Connection conn = ConnectionDB.ConnDB();
+
+    String sqlStmt = "insert into saving values (?,?,?,?)";
+    PreparedStatement myPreparedStatement = null;
+    myPreparedStatement = conn.prepareStatement(sqlStmt);
+    myPreparedStatement.setInt(1, saving.getS_number()); //(coluna, variable)
+    myPreparedStatement.setInt(2, saving.getT_number());
+    myPreparedStatement.setFloat(3, saving.getS_balance());
+    myPreparedStatement.setString(4, String.valueOf(saving.getS_fee()));
+    myPreparedStatement.executeUpdate(); //insert, delete, update
+    conn.commit();
+    conn.close();
+}
+
+public static void Delete(Saving saving) throws SQLException{
+	
+	Connection conn = ConnectionDB.ConnDB();
+	String sqlStmt = "delete from saving where s_number = " + saving.getS_number();
+	PreparedStatement myPreparedStatement = null;
+    myPreparedStatement = conn.prepareStatement(sqlStmt);  
+    myPreparedStatement.executeUpdate(); 
+    conn.commit();
+    conn.close();
+}
+
+public static Saving Search(Saving saving) throws SQLException{
+
+	
+	Connection conn = ConnectionDB.ConnDB();
+    Saving sav= new Saving();
+	String sqlQuery;
+	sqlQuery = "select * from saving where s_number = " + saving.getS_number();
+	Statement myStatement = null;
+    ResultSet myResultSet = null;
+    myStatement = conn.createStatement();
+    myResultSet = myStatement.executeQuery(sqlQuery);
+    
+    while(myResultSet.next())
+    {
+    
+    	sav.setS_number(myResultSet.getInt(1));
+    	sav.setT_number(myResultSet.getInt(2));
+    	sav.setS_balance(myResultSet.getFloat(3));
+    	sav.setS_fee(myResultSet.getString(4).charAt(0));
+    	System.out.println("\nSaving No:" + sav.getS_number() + " Trans. No:" + sav.getT_number()+ " Balance: " + sav.getS_balance()+ " Fee: " + sav.getS_fee());
+    }
+    
+    conn.close();
+    return sav;
+	
+}
+
+//public static void Update(Saving saving) throws SQLException{
+//	
+//	Connection conn = ConnectionDB.ConnDB();
+//	String sqlStmt = "update Students set name='" + student.getName() + "' where id= "  + student.getId();
+//	PreparedStatement myPreparedStatement = null;
+//    myPreparedStatement = conn.prepareStatement(sqlStmt);  
+//    myPreparedStatement.executeUpdate(); 
+//    conn.commit();
+//    conn.close();
+//}
+
+
+}

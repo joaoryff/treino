@@ -1,0 +1,76 @@
+package bus;
+
+import java.sql.SQLException;
+
+import data.CheckingDB;
+
+public class Checking extends Account {
+	private int ch_number;
+	private int t_number;
+	private float ch_balance;
+	private char ch_fee;
+	
+	public int getCh_number() {
+		return ch_number;
+	}
+	public void setCh_number(int ch_number) {
+		this.ch_number = ch_number;
+	}
+	
+	public int getT_number() {
+		return t_number;
+	}
+	public void setT_number(int t_number) {
+		this.t_number = t_number;
+	}
+	public float getCh_balance() {
+		return ch_balance;
+	}
+	public void setCh_balance(float ch_balance) {
+		this.ch_balance = ch_balance;
+	}
+	public char getCh_fee() {
+		return ch_fee;
+	}
+	public void setCh_fee(char ch_fee) {
+		this.ch_fee = ch_fee;
+	}
+	public Checking(int ac_number, int pin, Date ac_opendate, float balance,
+			enumAccType ac_type, int ac_id, int ch_number, int t_number,
+			float ch_balance, char ch_fee) {
+		super(ac_number, pin, ac_opendate, balance, ac_type, ac_id);
+		this.ch_number = ch_number;
+		this.t_number = t_number;
+		this.ch_balance = ch_balance;
+		this.ch_fee = ch_fee;
+	}
+	public Checking(int ac_number, int pin, Date ac_opendate, float balance,
+			enumAccType ac_type, int ac_id) {
+		super(ac_number, pin, ac_opendate, balance, ac_type, ac_id);
+		
+		this.ch_number = ch_number;
+		this.t_number = t_number;
+		this.ch_balance = ch_balance;
+		this.ch_fee = ch_fee;
+		}
+	public Checking() {
+		super();
+		this.ch_number = 0;
+		this.t_number = 0;
+		this.ch_balance = 0;
+		this.ch_fee = ' ';
+	}
+	
+	public String toString() {
+		return "Checking [ch_number=" + ch_number + ", t_number=" + t_number
+				+ ", ch_balance=" + ch_balance + ", ch_fee=" + ch_fee + "]";
+	}
+	
+	
+	public static Checking DisplayAll(int cid) throws SQLException{
+		
+		return CheckingDB.DisplayAll(cid);
+	}
+
+	
+}

@@ -1,0 +1,38 @@
+package data;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import bus.*;
+
+public class AccountDB {
+	
+public static Account Display() throws SQLException{
+		   
+		Connection conn = ConnectionDB.ConnDB();
+	    Account acc = new Account();
+		String sqlQuery;
+		System.out.println("\nAccount list...\n");
+	    sqlQuery = "select * from account";
+	    Statement myStatement = null;
+	    ResultSet myResultSet = null;
+	    myStatement = conn.createStatement();
+	    myResultSet = myStatement.executeQuery(sqlQuery);
+	    
+	    while(myResultSet.next())
+	    {
+	    
+	    	acc.setAccNo(myResultSet.getInt(1));
+	    	acc.setPin(myResultSet.getInt(2));
+	    	acc.setDate(myResultSet.getDate(3));
+	    	System.out.println("\nID:" + acc.getAccNo() + " Name:" + acc.getPin());
+	    }
+	    
+	    conn.close();
+	   return acc;
+	   
+	}
+
+}

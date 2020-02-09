@@ -1,0 +1,42 @@
+package data;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import bus.Account;
+import bus.Checking;
+import bus.Credit;
+import bus.Saving;
+
+public class CheckingDB {
+	
+	public static Checking DisplayAll() throws SQLException{
+		   
+		
+	    Connection conn = ConnectionDB.ConnDB();
+	    Checking che = new Checking();
+		String sqlQuery;
+		System.out.println("\nAccout Informations\n");
+	    sqlQuery = "select ch.ch_number, ch.ac_number, ch.ch_balance from checking ch";
+	    Statement myStatement = null;
+	    ResultSet myResultSet = null;
+	    myStatement = conn.createStatement();
+	    myResultSet = myStatement.executeQuery(sqlQuery);
+	    
+	    while(myResultSet.next())
+	    {
+	    
+	    	che.setCh_number(myResultSet.getInt(1));
+	    	che.setAccNo(myResultSet.getInt(2));
+	    	che.setCh_balance(myResultSet.getInt(3));
+	    		System.out.println("\nChecking Number:" + che.getCh_number() + " "  + che.getAccNo() + "Balance: " + che.getCh_balance());
+	    }
+	    
+	    conn.close();
+	   return che;
+	   
+	}
+
+}

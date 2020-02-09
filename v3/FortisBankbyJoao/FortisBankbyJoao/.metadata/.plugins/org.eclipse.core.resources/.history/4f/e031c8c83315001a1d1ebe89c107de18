@@ -1,0 +1,125 @@
+package client;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import bus.Account;
+import bus.Customer;
+import bus.Manager;
+
+public class BankApp {
+
+	public static void main(String[] args) throws SQLException {
+
+		Scanner scan = new Scanner(System.in);
+	    int option;
+	    Customer cus = new Customer();
+	 
+	    
+	    do{	
+	    	System.out.println("\nWelcome to Joju Bank");
+	    	System.out.println("\nChoose a option.");
+	    	System.out.println("\n1.Login");
+	    	System.out.println("\n2.Exit application ");
+	    	option= scan.nextInt();
+	    	
+			switch(option)
+			{
+			case 1:
+			{
+				System.out.println("\nEnter customer id: ");
+			    cus.setId(scan.nextInt());
+			    scan.nextLine();
+			    System.out.println("\nEnter customer password: ");
+			    cus.setPass(scan.next());
+			    int check = 0;
+			    Customer.Login(cus,check);
+			    
+			    do{
+			    
+			    
+				System.out.println("\nWelcome");
+				System.out.println("\nChoose an option");
+				System.out.println("\n1. Display your account informations");
+				System.out.println("2. Create a saving account");
+				System.out.println("3. Create a credit account");
+				System.out.println("4. Delete a saving account");
+				System.out.println("5. Delete a credit account");
+				System.out.println("6. Transactions");
+				System.out.println("7. Exit application");
+				option= scan.nextInt();
+				
+				switch(option)
+				{
+				case 1:
+					//Display
+					Account.DisplayAll();
+					break;
+//				case 2:
+//					//Add
+//					System.out.println("\nInsert new client");
+//				    System.out.println("\nCustomer Id: ");
+//				    cus.setId(scan.nextInt());
+//				    scan.nextLine();
+//				    System.out.println("\nCustomer First Name: ");
+//				    cus.setFn(scan.next()); 
+//				    System.out.println("\nCustomer Last Name: ");
+//				    cus.setLn(scan.next()); 
+//				    System.out.println("\nCustomer Password: ");
+//				    cus.setPass(scan.next()); 
+//				    Customer.Add(cus);
+//				    Customer.Display();
+//					break;
+//				case 3:
+//					 //Delete
+//				    System.out.println("\nRemove a customer");
+//				    System.out.println("\nCustomer Id: ");
+//				    cus.setId(scan.nextInt());
+//				    scan.nextLine();
+//				    Customer.Delete(cus);
+//				    Customer.Display();
+//					break;
+//				case 4:
+//					  //Search
+//				    System.out.println("\nSearch customer by ID...\n");
+//				    System.out.println("\nCustomer Id: ");
+//				    cus.setId(scan.nextInt());
+//				    scan.nextLine();
+//				    Customer.Search(cus);
+//					break;
+//				case 5:
+//					  //Update
+//				    System.out.println("\nUpdate a customer");
+//				    System.out.println("\nCustomer Id: ");
+//				    cus.setId(scan.nextInt());
+//				    scan.nextLine();
+//				    System.out.println("\nStudent Name: ");
+//				    cus.setFn(scan.next()); 
+//				    Customer.Update(cus);
+//				    Customer.Display();
+//					break;
+//					default:
+				}
+			    }while(option != 7);
+			    System.out.println("System exited!");
+			    break;
+			}
+			case 2:
+				break;
+			default:
+		}
+	    }while(option !=2);
+	    System.out.println("System exited!");
+	    
+
+
+	    
+	    scan.close();
+	    System.exit(0);
+
+	}
+  }
+
+		
+
+					
